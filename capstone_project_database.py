@@ -33,7 +33,7 @@ def populate_initial_values():
 
 
 # Function to add a new book to the database.
-def add_book():
+def add_new_book():
     title = True
     title = input('\nPlease enter the book title: ')
     author = input('Please enter the name of the author: ')
