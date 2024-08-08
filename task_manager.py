@@ -186,3 +186,25 @@ while choice != 'e':
             print('You currently have no tasks assigned to you.')
         options()
         
+    elif choice == 'ds':
+    # Option for admin only to view the statistics of total users and tasks.
+        if is_admin(username):
+            total_users = len(credentials)
+            print('\nYou have chosen to see the statistics of all registered users and all current tasks: \n')
+            print(f'Total number of users: {total_users}.')
+            total_tasks = len(task_list)
+            print(f'Total number of tasks: {total_tasks}.')
+            options()
+            pass
+        else:
+            print('\nOnly admins can view the statistics option.')
+            options()
+        
+    elif choice == 'e':
+    # Exit option.
+        print('\nAll data has been saved.')
+        print('Goodbye and have a great day!\n')
+        
+    else:
+        print('\nYou have entered an invalid option. Please enter a valid option.')
+        options()
