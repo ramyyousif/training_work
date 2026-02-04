@@ -152,34 +152,3 @@ def search_books():
     db.close()
 
 
-# Main function to display menu and execute user's choice.
-def main():
-    create_database_and_table()
-    populate_initial_values()
-    while True:
-        print('\nMenu:')
-        print('\n1. Enter new book.')
-        print('2. Update book.')
-        print('3. Delete book.')
-        print('4. Search for books.')
-        print('0. Exit')
-        choice = input('\nPlease enter your choice: ')
-        if choice == '1':
-            add_book()
-        elif choice == '2':
-            update_book()
-        elif choice == '3':
-            delete_book()
-        elif choice == '4':
-            search_books()
-        elif choice == '0':
-            print('\nThank you for using the ebookstore program, have a great day!\n')
-            break
-        else:
-            print('\nInvalid choice, please try again.')
-            print('(Options 1, 2, 3, 4 or 0.)')
-
-print('\nWelcome!')
-main()
-
-
